@@ -1,0 +1,17 @@
+.nc_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+
+  .nc_logo {
+    font-family: NcFont;
+    font-size: 34px;
+    font-weight: bold;
+    span {
+      font-size: 18px;
+      font-weight: 500;
+      padding-left: 14px;
+    }
+  }
+}
