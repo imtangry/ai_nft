@@ -3,6 +3,7 @@ import NcHeader from "@/comp/Header/NcHeader";
 import '@rainbow-me/rainbowkit/styles.css';
 import './globals.scss';
 import NcBody from "../comp/Body/NcBody";
+import {Providers} from "../comp/Provides";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -16,8 +17,10 @@ export default function RootLayout() {
         <html lang="en">
         <body className={[inter.className, 'ai_nft'].join(' ')}>
         <div className="wrapper">
-            <NcHeader/>
-            <NcBody/>
+            <Providers>
+                <NcHeader/>
+                <NcBody/>
+            </Providers>
         </div>
         </body>
         </html>

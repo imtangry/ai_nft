@@ -7,7 +7,6 @@ export default function NcHeader() {
             <div className="nc_logo">
                 AI NFT
                 <span>_Creator</span>
-                {process.env.NC_NFT_STORAGE_KEY}
             </div>
             <WalletButton/>
         </header>

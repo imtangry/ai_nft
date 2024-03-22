@@ -27,6 +27,11 @@ html, body, ul, li, div, p, span, button, input, textarea {
     padding: 0 24px;
     overflow: hidden;
     //background-color: #ffffff;
+    >div{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
   }
 }
 

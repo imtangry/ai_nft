@@ -3,11 +3,17 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  overflow: hidden;
+  overflow: auto;
 
   .ncb_left {
     flex: 0 0 380px;
     padding: 100px 24px;
+
+    .c_info p{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 
   .ncb_right {
@@ -16,15 +22,23 @@
     align-items: center;
     flex: 1;
     min-width: 300px;
-    background-color: blueviolet;
     padding: 100px 24px;
+
+    img {
+      max-width: 80%;
+      max-height: 40%;
+    }
+
+    p {
+      margin-top: 20px;
+    }
   }
 
   input, textarea {
     border: 2px solid rgb(37, 41, 46);
     width: 100%;
     height: 50px;
-    margin: 14px 0;
+
     font-size: 16px;
     border-radius: 12px;
     padding: 12px;
@@ -34,6 +48,7 @@
     resize: none;
     height: 200px;
     font-family: Arial;
+    margin: 14px 0;
   }
 
   button {
@@ -50,7 +65,8 @@
     font-weight: bold;
     letter-spacing: 0.2em;
 
-    &.pending {
+
+    &.pending,&[disabled] {
       cursor: not-allowed;
       background-color: rgba(37, 41, 46, 0.7);
     }
