@@ -47,13 +47,11 @@ export default function ContractStatus({account}) {
         ],
     })
 
-    console.log(data)
-
     return (
         <>
             <hr/>
-            <p>当前合约总供应量：{(data?.[0].result).toString()}</p>
-            <p>当前账户NTF数量：{(data?.[1].result).toString()}</p>
+            <p>当前合约总供应量：{data ? (data?.[0].result).toString() : 0}</p>
+            <p>当前账户NTF数量：{data ? (data?.[1].result).toString() : 0}</p>
         </>
     )
 }

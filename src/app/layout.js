@@ -12,7 +12,7 @@ export const metadata = {
     description: "Generate NFT use AI",
 };
 
-export default function RootLayout() {
+export default function RootLayout({children}) {
     return (
         <html lang="en">
         <body className={[inter.className, 'ai_nft'].join(' ')}>
@@ -20,6 +20,7 @@ export default function RootLayout() {
             <Providers>
                 <NcHeader/>
                 <NcBody/>
+                {children}
             </Providers>
         </div>
         </body>
